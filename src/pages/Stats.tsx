@@ -35,8 +35,8 @@ export default function Stats() {
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col gap-16 pb-12 px-4 md:px-0">
       {/* PAGE HEADER */}
-      <div className="text-center">
-        <h1 className="text-5xl md:text-7xl font-bold uppercase tracking-widest text-primary drop-shadow-[6px_6px_0_theme('colors.foreground')]">
+      <div className="text-center mt-8">
+        <h1 className="text-4xl md:text-7xl font-bold uppercase tracking-widest text-primary drop-shadow-[4px_4px_0_theme('colors.foreground')] md:drop-shadow-[6px_6px_0_theme('colors.foreground')]">
           Player Profile
         </h1>
       </div>
@@ -45,7 +45,7 @@ export default function Stats() {
       <Card className="shadow-[8px_8px_0_theme('colors.foreground')] border-4 border-foreground hover:translate-y-[-2px] transition-transform">
         <CardContent className="p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
           {/* Avatar Image */}
-          <div className="w-32 h-32 md:w-48 md:h-48 shrink-0 bg-secondary border-4 border-foreground shadow-[4px_4px_0_theme('colors.foreground')] flex items-center justify-center relative overflow-hidden">
+          <div className="w-32 h-32 md:w-48 md:h-48 mx-auto md:mx-0 shrink-0 bg-secondary border-4 border-foreground shadow-[4px_4px_0_theme('colors.foreground')] flex items-center justify-center relative overflow-hidden">
             <img 
               src="/aarush.jpg" 
               alt="Aarush" 
@@ -55,22 +55,24 @@ export default function Stats() {
             <div className="absolute inset-0 w-full h-full bg-[linear-gradient(rgba(0,0,0,0.1)_50%,transparent_50%)] bg-[length:100%_4px] pointer-events-none" />
           </div>
           
-          <div className="flex-1 space-y-6">
+          <div className="flex-1 space-y-6 min-w-0">
             <div>
               <div className="flex flex-wrap items-end gap-4 mb-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary uppercase drop-shadow-sm">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary uppercase drop-shadow-sm text-center md:text-left break-words">
                   {characterBio.characterClass}
                 </h2>
-                <span className="text-lg md:text-xl font-bold bg-foreground text-background px-3 py-1 uppercase shadow-[2px_2px_0_theme('colors.primary.DEFAULT')]">
+                <span className="text-lg md:text-xl font-bold bg-foreground text-background px-3 py-1 uppercase shadow-[2px_2px_0_theme('colors.primary.DEFAULT')] mx-auto md:mx-0">
                   LVL: {currentLevel}
                 </span>
               </div>
               <div className="w-full h-1 bg-foreground/20 mt-4 mb-4" />
             </div>
             
-            <p className="text-sm md:text-base text-card-foreground leading-relaxed whitespace-pre-line">
-              {characterBio.introduction}
-            </p>
+            <div className="max-h-[250px] overflow-y-auto md:max-h-none md:overflow-visible pr-2 md:pr-0">
+              <p className="text-sm md:text-base text-card-foreground leading-relaxed whitespace-pre-line text-justify md:text-left break-words">
+                {characterBio.introduction}
+              </p>
+            </div>
           </div>
         </CardContent>
       </Card>

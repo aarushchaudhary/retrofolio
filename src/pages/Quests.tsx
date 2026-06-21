@@ -29,8 +29,8 @@ export default function Quests() {
     <div className="w-full max-w-7xl mx-auto flex flex-col items-center pb-12">
       
       {/* HEADER SECTION */}
-      <div className="text-center mb-16 space-y-6">
-        <h1 className="text-5xl md:text-7xl font-bold uppercase tracking-widest text-primary drop-shadow-[6px_6px_0_theme('colors.foreground')]">
+      <div className="text-center mb-16 space-y-6 mt-8">
+        <h1 className="text-4xl md:text-7xl font-bold uppercase tracking-widest text-primary drop-shadow-[4px_4px_0_theme('colors.foreground')] md:drop-shadow-[6px_6px_0_theme('colors.foreground')]">
           Quest Log
         </h1>
         <div className="inline-block bg-secondary px-6 py-2 border-4 border-foreground shadow-[4px_4px_0_theme('colors.foreground')]">

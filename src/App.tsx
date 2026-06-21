@@ -15,7 +15,7 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <BrowserRouter>
         <div className="min-h-screen bg-background text-foreground font-mono flex flex-col">
-          <header className="flex justify-between items-center border-b border-border p-4">
+          <header className="relative z-50 flex justify-between items-center border-b border-border p-4 bg-background">
             <Navigation />
             <ThemeToggle />
           </header>

@@ -45,8 +45,8 @@ export default function Multiplayer() {
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col items-center pb-12">
       {/* PAGE HEADER */}
-      <div className="text-center mb-4 space-y-6">
-        <h1 className="text-5xl md:text-7xl font-bold uppercase tracking-widest text-primary drop-shadow-[6px_6px_0_theme('colors.foreground')]">
+      <div className="text-center mb-4 space-y-6 mt-8">
+        <h1 className="text-4xl md:text-7xl font-bold uppercase tracking-widest text-primary drop-shadow-[4px_4px_0_theme('colors.foreground')] md:drop-shadow-[6px_6px_0_theme('colors.foreground')]">
           Multiplayer Mode
         </h1>
       </div>
